@@ -1,0 +1,23 @@
+{
+  "name": "counter-e2e-test",
+  "version": "1.0.0",
+  "description": "This is a counter that should only display positive numbers, it should increment and decrement when pressed accordingly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idutta999/counter-e2e-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/idutta999/counter-e2e-test/issues"
+  },
+  "homepage": "https://github.com/idutta999/counter-e2e-test#readme",
+  "devDependencies": {
+    "cypress": "^15.2.0"
+  }
+}
