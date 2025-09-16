@@ -11,7 +11,7 @@ on:
 #      - cron: '*/30 * * * *'
 
 jobs:
-  test-run:
+  e2e-test-run:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
