@@ -20,7 +20,7 @@ All code should be on Github, the GH runner should have had at least one seccess
    ```bash
    npm install
    ```
-2. Start the server:
+2. Execute tests:
    ```bash
-   npx http-server -p 3000
+   cypress run
    ```
