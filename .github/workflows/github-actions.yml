@@ -1,0 +1,21 @@
+name: e2e Test
+
+on:
+  push:
+    branches:
+      - main
+    pull_request:
+      branches:
+        - main
+#    schedule:
+#      - cron: '*/30 * * * *'
+
+jobs:
+  test-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@main
+
+      - name: Execute e2e tests
+        run: cypress-io/gihub-action@v2
