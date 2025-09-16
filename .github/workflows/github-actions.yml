@@ -28,6 +28,8 @@ jobs:
         run: curl -i localhost:3000
       - name: Verify
         uses: cypress-io/github-action@v6
+        with:
+          browser: chrome-for-testing
 #        with:
 #          record: true
 #        env:
