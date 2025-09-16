@@ -17,4 +17,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Verify
-        run: cypress-io/github-action@v6
+        uses: cypress-io/github-action@v6
