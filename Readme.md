@@ -24,3 +24,10 @@ All code should be on Github, the GH runner should have had at least one seccess
    ```bash
    cypress run
    ```
+   ```bash
+   cypress run --headed --browser chrome --no-exit
+   ```
+### View results in cypress cloud
+
+Login to https://cloud.cypress.io/ to view test run results. 
+- Project Id: pybf5a
