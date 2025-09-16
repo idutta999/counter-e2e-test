@@ -1,6 +1,7 @@
 describe('example tests', () => {
     it('Should have a title', () => {
         cy.visit('app/index.html')
-        cy.contains('increment-btn', 'Increment')
+        cy.get('button[id="increment-btn"]')
+            .should('be.enabled')
     })
 })
