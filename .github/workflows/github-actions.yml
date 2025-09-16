@@ -14,6 +14,10 @@ jobs:
   e2e-test-run:
     runs-on: ubuntu-latest
     steps:
+      - name: Clear cache
+        uses: actions/github-script@v6
+        with:
+          script: ''
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup node
@@ -23,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Spinup app
-        run: RUNNER_TRACKING_ID="" && npx http-server -p 3000 &
+        run: RUNNER_TRACKING_ID="" && npx http-server -p 3000 --cors &
       - name: test app is still running
         run: curl -i localhost:3000
       - name: Verify

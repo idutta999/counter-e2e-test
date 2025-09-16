@@ -1,6 +1,6 @@
 describe('Counter functionality', () => {
     beforeEach(function () {
-        cy.visit('http://127.0.0.1:3000');
+        cy.visit('http://localhost:3000');
     })
 
     it('Should have a title', () => {
