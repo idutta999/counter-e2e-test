@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Spinup app
-        run: RUNNER_TRACKING_ID="" && npx http-server -p 3000 --cors &
+        run: npx http-server -p 3000 --no-cors &
       - name: test app is still running
         run: curl -i localhost:3000
       - name: Verify
