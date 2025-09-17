@@ -1,4 +1,4 @@
-describe('Counter functionality', () => {
+describe('Counter Availability', () => {
     beforeEach(function () {
         // cy.visit(Cypress.config().baseUrl);
         cy.visit('app/index.html');
@@ -17,6 +17,21 @@ describe('Counter functionality', () => {
     it('Decrement should be enabled', () => {
         cy.get('button[id="decrement-btn"]')
             .should('be.enabled')
+    })
+
+})
+
+describe('Counter core functionality', () => {
+    beforeEach(function () {
+        // cy.visit(Cypress.config().baseUrl);
+        cy.visit('app/index.html');
+    })
+
+    it('Increment should work', () => {
+        cy.get('button[id="increment-btn"]')
+            .click()
+        cy.get('span[id="counter"]')
+            .should('have.text', '1')
     })
 
     it('Counter should display only positive values', () => {
