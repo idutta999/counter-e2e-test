@@ -1,6 +1,7 @@
 describe('Counter functionality', () => {
     beforeEach(function () {
-        cy.visit(Cypress.config().baseUrl);
+        // cy.visit(Cypress.config().baseUrl);
+        cy.visit('app/index.html');
     })
 
     it('Should have a title', () => {

@@ -16,24 +16,24 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: 22
-      - name: Install dependencies
-        run: npm install
-      - name: Spinup app
-        run: npx http-server -p 3000 --no-cors &
-      - name: test app is still running
-        run: curl -i localhost:3000
+#      - name: Setup node
+#        uses: actions/setup-node@v2
+#        with:
+#          node-version: 22
+#      - name: Install dependencies
+#        run: npm install
+#      - name: Spinup app
+#        run: npx http-server -p 3000 --no-cors &
+#      - name: test app is still running
+#        run: curl -i localhost:3000
       - name: Verify
         uses: cypress-io/github-action@v6
         with:
           browser: chrome
-          wait-on: 'http://localhost:3000'
-          wait-on-timeout: 180
+          record: true
+#          wait-on: 'http://localhost:3000'
+#          wait-on-timeout: 180
 #        with:
-#          record: true
-#        env:
-#          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
 
