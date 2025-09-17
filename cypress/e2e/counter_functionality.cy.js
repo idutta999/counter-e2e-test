@@ -1,6 +1,6 @@
 describe('Counter functionality', () => {
     beforeEach(function () {
-        cy.visit('http://localhost:3000');
+        cy.visit(Cypress.config().baseUrl);
     })
 
     it('Should have a title', () => {
